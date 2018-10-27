@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>{{ name }}</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    {% load staticfiles %}
+    <link rel="stylesheet" href="{%static '/assets/css/main.css' %}">
+    <script src="{% static '/assets/js/input.js' %}"></script>
+</head>
+
+
+<body class="homepage" vocab="http://schema.org/" typeof="Product">
+		<div id="page-wrapper">
+
+		<!-- Header -->
+			<div id="header-wrapper">
+
+				<div id="header" class="container" style="width: 100%">
+					<h1 property="name" style="margin-top:-100px;line-height: 100%;">{{ name }}</h1>
+					<br>
+					<li>
+					<br>
+					<br>
+								<!-- Nav -->
+				<nav id="nav" style="margin-top: -15px;">
+							<ul>
+								<li>
+									<a class="icon fa-home" href="/">
+										<span>Home</span>
+									</a>
+								</li>
+								<li>
+									<a href="/add_client" class="fa fa-user-plus" aria-hidden="true">
+										<span>Adicionar cliente</span>
+									</a>
+								</li>
+
+								<li>
+									<a href="/list_clients" class="fa fa-user" aria-hidden="true">
+										<span>Listar clientes</span>
+									</a>
+								</li>
+
+								<li>
+									<a href="/add_product" class="fa fa-cart-plus" aria-hidden="true">
+										<span>Adicionar produto</span>
+									</a>
+								</li>
+
+								<li>
+									<a href="/list_products" class="fa fa-shopping-cart" aria-hidden="true">
+										<span>Listar produtos</span>
+									</a>
+								</li>
+
+                                <li>
+                                    <a href="/add_sale" class="fa fa-shopping-bag" aria-hidden="true">
+                                        <span>Adicionar venda</span>
+                                    </a>
+                                </li>
+
+                                 <li>
+                                    <a href="/list_sales" class="fa fa-money" aria-hidden="true">
+                                        <span>Listar vendas</span>
+                                    </a>
+                                </li>
+
+
+							</ul>
+					</nav>
+
+					<div class="container" style="text-align: center;width: 400px;">
+						<form class="pure-form pure-form-aligned"  action="{% url 'edit_product_info' %}" method="post">
+						{% csrf_token %}
+						    <div align="center" id="product_table">
+								<style>
+								    th{
+								    	    background-color: #ed786a;
+										    border: none;
+										    color: white;
+										    padding: 10px;
+										    text-align: center;
+										    text-shadow: 1px 1px 1px ;
+										    white-space: nowrap;
+								    }
+								    td {
+									    border-bottom: solid 1px #DDEFEF;
+									    border : solid black;
+									    color: #333;
+									    padding: 10px;
+									    text-shadow: 1px 1px 1px #fff;
+									    white-space: nowrap;
+									}
+									tr{
+										border: solid black;
+									}
+									table {
+										border: solid black;
+									}
+							    </style>
+
+						        <table align="center">
+						      		<thead>
+						        		<tr>
+						        			<th> Price </th>
+						        			<th> Tax Type </th>
+                                            <th> <a href="/list_taxes/"> Tax Description </a></th>
+                                            <th> Tax Value </th>
+						        		</tr>
+						        	</thead>
+                                        <tr typeof="PriceSpecification" property="valueAddedTaxIncluded">
+                                            <td property="price">{{ products.1.0 }}</td>
+                                            <td>{{ products.1.1 }}</td>
+                                            <td property="description"> <a href="/info_tax/{{ products.1.2 }}">{{ products.1.2 }}</a></td>
+                                            <td>{{ products.1.3 }}</td>
+                                        </tr>
+						        </table>
+						        <input id="input_submit" type="hidden" value="{{products}}" name="product_info"> </input>
+				        		<button onclick="inputForm()"> Edit </button>
+				        		<input id="input_submit" type="hidden" value="{{name}}" name="product_name">
+				        		</input>
+
+						    </div>
+						</form>
+					</div>
+
+                    {% if  name  == "Pão" %}
+                        <a href="/pao_info/"> See More </a>
+
+                     {% elif  name  == "Croissant" %}
+                        <a href="/croissant_info/"> See More </a>
+
+                     {% elif  name  == "Broa de Milho" %}
+                        <a href="/broa_info/"> See More </a>
+
+                     {% elif  name  == "Bolo Rei" %}
+                        <a href="/bolo_rei_info/"> See More </a>
+
+                     {% elif  name  == "Pão de Forma" %}
+                        <a href="/pao_de_forma_info/"> See More </a>
+
+                     {% elif  name  == "Pão de ló de Ovar" %}
+                        <a href="/pao_de_lo_info/"> See More </a>
+
+                     {% elif  name  == "Pão de Mistura" %}
+                        <a href="/pao_de_mistura_info/"> See More </a>
+
+                     {% elif  name  == "Folar" %}
+                        <a href="/folar_info/"> See More </a>
+
+                    {% endif %}
+				</div>
+			</div>
+		</div>
+</body>

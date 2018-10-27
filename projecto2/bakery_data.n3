@@ -1,0 +1,599 @@
+@prefix ns0: <http://xmlns.com/foaf/spec/> .
+@prefix product: <http://www.padaria.com/products/> .
+@prefix tax: <http://www.padaria.com/products/tax/> .
+@prefix company: <http://www.padaria.com/company/> .
+@prefix client: <http://www.padaria.com/clients/> .
+@prefix client_addr: <http://www.padaria.com/clients/client_address/> .
+@prefix client_cont: <http://www.padaria.com/clients/client_contact/> .
+@prefix client_trans: <http://www.padaria.com/clients/transactions/> .
+@prefix trans_time: <http://www.padaria.com/clients/transactions/transaction_time/> .
+
+
+
+
+company:
+  a ns0:Company ;
+  ns0:comp_id " 513581332 " ;
+  ns0:tax_number " 513581332 " ;
+  ns0:name "PADARIA PASTELARIA SARGACAL LDA." ;
+  ns0:busi_name "PADARIA PASTELARIA SARGACAL LDA." ;
+  ns0:Address company:address ;
+  ns0:Contact company:contact .
+
+company:address
+  a ns0:Address ;
+  ns0:address "RUA 15 DE MAIO, 735" ;
+  ns0:city "Válega" ;
+  ns0:postal "3880-503" ;
+  ns0:country "PT" .
+
+company:contact
+  a ns0:Contact ;
+  ns0:comp_telephone "256502232" ;
+  ns0:comp_site "https://padsargacal.wixsite.com/padaria" .  
+
+
+
+
+
+product:01
+  a ns0:Product ;
+  ns0:prod_name "Pão";
+  ns0:cost "0.105";
+  ns0:Tax tax:01 .
+
+product:02
+  a ns0:Product ;
+  ns0:prod_name "Pastél";
+  ns0:cost "0.40";
+  ns0:Tax tax:02 .
+
+product:03
+  a ns0:Product ;
+  ns0:prod_name "Croissant";
+  ns0:cost "0.37";
+  ns0:Tax tax:03 .
+
+product:04
+  a ns0:Product ;
+  ns0:prod_name "Bicos de Pato";
+  ns0:cost "0.37";
+  ns0:Tax tax:04 .
+
+product:05
+  a ns0:Product ;
+  ns0:prod_name "Broa de Milho";
+  ns0:cost "1.70";
+  ns0:Tax tax:05 .
+
+product:06
+  a ns0:Product ;
+  ns0:prod_name "Bolo Rei";
+  ns0:cost "8.80";
+  ns0:Tax tax:06 .
+
+product:07
+  a ns0:Product ;
+  ns0:prod_name "Regueifa";
+  ns0:cost "1.10";
+  ns0:Tax tax:07 .
+
+product:08
+  a ns0:Product ;
+  ns0:prod_name "Pão de Forma";
+  ns0:cost "1.50";
+  ns0:Tax tax:08 .
+
+product:09
+  a ns0:Product ;
+  ns0:prod_name "Pão de ló de Ovar";
+  ns0:cost "10.00";
+  ns0:Tax tax:09 .
+
+product:10
+  a ns0:Product ;
+  ns0:prod_name "Sandes de Queijo e Fiambre";
+  ns0:cost "0.75";
+  ns0:Tax tax:10 .
+
+product:11
+  a ns0:Product ;
+  ns0:prod_name "Água mineral sem gás";
+  ns0:cost "0.40";
+  ns0:Tax tax:11 .
+
+product:12
+  a ns0:Product ;
+  ns0:prod_name "Bolo de aniversário";
+  ns0:cost "9.50";
+  ns0:Tax tax:12 .
+
+product:13
+  a ns0:Product ;
+  ns0:prod_name "Pão da avó";
+  ns0:cost "1.65";
+  ns0:Tax tax:13 .
+
+product:14
+  a ns0:Product ;
+  ns0:prod_name "Pão de Mistura";
+  ns0:cost "0.105";
+  ns0:Tax tax:14 .
+
+product:15
+  a ns0:Product ;
+  ns0:prod_name "Pão integral";
+  ns0:cost "0.105";
+  ns0:Tax tax:15 .
+
+product:16
+  a ns0:Product ;
+  ns0:prod_name "Fogaça";
+  ns0:cost "3.50";
+  ns0:Tax tax:16 .
+
+product:17
+  a ns0:Product ;
+  ns0:prod_name "Folar";
+  ns0:cost "6.00";
+  ns0:Tax tax:17 .
+
+product:18
+  a ns0:Product ;
+  ns0:prod_name "Miniatura de pastél";
+  ns0:cost "0.35";
+  ns0:Tax tax:18 .
+
+
+
+
+
+
+
+tax:reduced_tax
+  a ns0:Tax ;
+  ns0:tax_desc "Taxa Reduzida";
+  ns0:value "6".
+
+tax:normal_tax
+  a ns0:Tax ;
+  ns0:tax_desc "Taxa Normal";
+  ns0:value "23".
+
+tax:intermediate_tax
+  a ns0:Tax ;
+  ns0:tax_desc "Taxa Intermédia";
+  ns0:value "13".
+
+tax:01
+  a ns0:Tax ;
+  ns0:t_type "IVA" ;
+  ns0:desc tax:reduced_tax.
+
+tax:02
+  a ns0:Tax ;
+  ns0:t_type "IVA" ;
+  ns0:desc tax:normal_tax.
+
+tax:03
+  a ns0:Tax ;
+  ns0:t_type "IVA" ;
+  ns0:desc tax:reduced_tax.
+
+tax:04
+  a ns0:Tax ;
+  ns0:t_type "IVA" ;
+  ns0:desc tax:reduced_tax.
+  
+tax:05
+  a ns0:Tax ;
+  ns0:t_type "IVA" ;
+  ns0:desc tax:reduced_tax.
+  
+tax:06
+  a ns0:Tax ;
+  ns0:t_type "IVA" ;
+  ns0:desc tax:normal_tax.
+  
+tax:07
+  a ns0:Tax ;
+  ns0:t_type "IVA" ;
+  ns0:desc tax:reduced_tax.
+  
+tax:08
+  a ns0:Tax ;
+  ns0:t_type "IVA" ;
+  ns0:desc tax:reduced_tax.
+  
+tax:09
+  a ns0:Tax ;
+  ns0:t_type "IVA" ;
+  ns0:desc tax:normal_tax.
+
+tax:10
+  a ns0:Tax ;
+  ns0:t_type "IVA" ;
+  ns0:desc tax:normal_tax.
+
+tax:11
+  a ns0:Tax ;
+  ns0:t_type "IVA" ;
+  ns0:desc tax:reduced_tax.
+
+tax:12
+  a ns0:Tax ;
+  ns0:t_type "IVA" ;
+  ns0:desc tax:normal_tax.
+
+tax:13
+  a ns0:Tax ;
+  ns0:t_type "IVA" ;
+  ns0:desc tax:reduced_tax.
+
+tax:14
+  a ns0:Tax ;
+  ns0:t_type "IVA" ;
+  ns0:desc tax:reduced_tax.
+
+tax:15
+  a ns0:Tax ;
+  ns0:t_type "IVA" ;
+  ns0:desc tax:reduced_tax.
+
+tax:16
+  a ns0:Tax ;
+  ns0:t_type "IVA" ;
+  ns0:desc tax:intermediate_tax.
+
+tax:17
+  a ns0:Tax ;
+  ns0:t_type "IVA" ;
+  ns0:desc tax:intermediate_tax.
+
+tax:18
+  a ns0:Tax ;
+  ns0:t_type "IVA" ;
+  ns0:desc tax:normal_tax.
+
+
+
+
+
+
+
+client:01
+  a ns0:Clients ;
+  ns0:client_name "Agrupamento de Escolas de Ovar" ;
+  ns0:ClientAddress client_addr:01 ;
+  ns0:ClientContact client_cont:01 .
+
+client:02
+  a ns0:Clients ;
+  ns0:client_name "Agrupamento de Escolas de Ovar Sul" ;
+  ns0:ClientAddress client_addr:02 ;
+  ns0:ClientContact client_cont:02 .
+
+client:03
+  a ns0:Clients ;
+  ns0:client_name "Confeitaria Convívio 2 Paiva e Correia L.da" ;
+  ns0:ClientAddress client_addr:03 ;
+  ns0:ClientContact client_cont:03 .
+
+client:04
+  a ns0:Clients ;
+  ns0:client_name "Restaurante Paradise" ;
+  ns0:ClientAddress client_addr:04 ;
+  ns0:ClientContact client_cont:04 .
+
+client:05
+  a ns0:Clients ;
+  ns0:client_name "Junta Freguesia de Válega" ;
+  ns0:ClientAddress client_addr:05 ;
+  ns0:ClientContact client_cont:05 .
+
+client:06
+  a ns0:Clients ;
+  ns0:client_name "Estabelecimentos Alentejano António Álvaro da Silva Matos" ;
+  ns0:ClientAddress client_addr:06 ;
+  ns0:ClientContact client_cont:06 .
+
+client:07
+  a ns0:Clients ;
+  ns0:client_name "Centro Cultural e Recrea. de Válega" ;
+  ns0:ClientAddress client_addr:07 ;
+  ns0:ClientContact client_cont:07 .
+
+client:08
+  a ns0:Clients ;
+  ns0:client_name "I.V.S. Irmaos Vaz e Silva e C  Lda" ;
+  ns0:ClientAddress client_addr:08 ;
+  ns0:ClientContact client_cont:08 .
+
+client:09
+  a ns0:Clients ;
+  ns0:client_name "Casa Alentejana - Ovar Rijo Freire e Silva" ;
+  ns0:ClientAddress client_addr:09 ;
+  ns0:ClientContact client_cont:09 .
+
+client:10
+  a ns0:Clients ;
+  ns0:client_name "A.D.O. Basquetebol" ;
+  ns0:ClientAddress client_addr:10 ;
+  ns0:ClientContact client_cont:10 .
+
+
+
+
+
+
+
+client_addr:01
+  a ns0:ClientAddress ;
+  ns0:client_address "R. Dom Dinis" ;
+  ns0:client_city "Ovar" ;
+  ns0:client_pc "3880-000" ;
+  ns0:client_region "Aveiro" ;
+  ns0:client_country "PT" .
+
+client_addr:02
+  a ns0:ClientAddress ;
+  ns0:client_address "R. Irmãos Oliveira Lopes" ;
+  ns0:client_city "Ovar" ;
+  ns0:client_pc "3880-192" ;
+  ns0:client_region "Aveiro" ;
+  ns0:client_country "PT" .
+
+client_addr:03
+  a ns0:ClientAddress ;
+  ns0:client_address "Rua das Palreiras" ;
+  ns0:client_city "Válega" ;
+  ns0:client_pc "3880-508" ;
+  ns0:client_region "Aveiro" ;
+  ns0:client_country "PT" .
+
+client_addr:04
+  a ns0:ClientAddress ;
+  ns0:client_address "Rua Alexandre Herculano" ;
+  ns0:client_city "Ovar" ;
+  ns0:client_pc "3880-192" ;
+  ns0:client_region "Aveiro" ;
+  ns0:client_country "PT" .
+
+client_addr:05
+  a ns0:ClientAddress ;
+  ns0:client_address "Av. Comendador António Augusto da Silva" ;
+  ns0:client_city "Válega" ;
+  ns0:client_pc "3880-508" ;
+  ns0:client_region "Aveiro" ;
+  ns0:client_country "PT" .
+
+client_addr:06
+  a ns0:ClientAddress ;
+  ns0:client_address "Rua das Estradas nº 678" ;
+  ns0:client_city "Válega" ;
+  ns0:client_pc "3880-508" ;
+  ns0:client_region "Aveiro" ;
+  ns0:client_country "PT" .
+
+client_addr:07
+  a ns0:ClientAddress ;
+  ns0:client_address "Rua do Centro Cultural e Recreativo de Válega" ;
+  ns0:client_city "Válega" ;
+  ns0:client_pc "3880-503" ;
+  ns0:client_region "Aveiro" ;
+  ns0:client_country "PT" .
+
+client_addr:08
+  a ns0:ClientAddress ;
+  ns0:client_address "Rua da Ponte Pedra Válega" ;
+  ns0:client_city "Válega" ;
+  ns0:client_pc "3880-549" ;
+  ns0:client_region "Aveiro" ;
+  ns0:client_country "PT" .
+
+client_addr:09
+  a ns0:ClientAddress ;
+  ns0:client_address "" ;
+  ns0:client_city "Válega" ;
+  ns0:client_pc "3880-508" ;
+  ns0:client_region "Aveiro" ;
+  ns0:client_country "PT" .
+
+client_addr:10
+  a ns0:ClientAddress ;
+  ns0:client_address "" ;
+  ns0:client_city "Ovar" ;
+  ns0:client_pc "3880-000" ;
+  ns0:client_region "Aveiro" ;
+  ns0:client_country "PT" .
+
+
+
+
+
+
+client_cont:01
+  a ns0:ClientContact ;
+  ns0:client_tel "256281000" ;
+  ns0:client_fax "256586411";
+  ns0:client_mail "esjmf@portugalmail.pt".
+
+client_cont:02
+  a ns0:ClientContact ;
+  ns0:client_tel "256502347" ;
+  ns0:client_fax "256503246";
+  ns0:client_mail "".
+
+client_cont:03
+  a ns0:ClientContact ;
+  ns0:client_tel "" ;
+  ns0:client_fax "";
+  ns0:client_mail "".
+
+client_cont:04
+  a ns0:ClientContact ;
+  ns0:client_tel "256575661" ;
+  ns0:client_fax "";
+  ns0:client_mail "".
+
+client_cont:05
+  a ns0:ClientContact ;
+  ns0:client_tel "" ;
+  ns0:client_fax "";
+  ns0:client_mail "".
+
+client_cont:06
+  a ns0:ClientContact ;
+  ns0:client_tel "256502090" ;
+  ns0:client_fax "";
+  ns0:client_mail "".
+
+client_cont:07
+  a ns0:ClientContact ;
+  ns0:client_tel "" ;
+  ns0:client_fax "";
+  ns0:client_mail "".
+
+client_cont:08
+  a ns0:ClientContact ;
+  ns0:client_tel "" ;
+  ns0:client_fax "";
+  ns0:client_mail "".
+
+client_cont:09
+  a ns0:ClientContact ;
+  ns0:client_tel "" ;
+  ns0:client_fax "";
+  ns0:client_mail "".
+
+client_cont:10
+  a ns0:ClientContact ;
+  ns0:client_tel "" ;
+  ns0:client_fax "";
+  ns0:client_mail "".
+
+
+
+
+
+client_trans:01
+  a ns0:Transaction ;
+  ns0:trans_client client:01 ;
+  ns0:trans_prod product:01 ;
+  ns0:trans_prod_quant "10" ;
+  ns0:trans_total_cost "1.05" ;
+  ns0:TransactionTime trans_time:01 .
+
+client_trans:02
+  a ns0:Transaction ;
+  ns0:trans_client client:02 ;
+  ns0:trans_prod product:02 ;
+  ns0:trans_prod_quant "5" ;
+  ns0:trans_total_cost "2.00" ;
+  ns0:TransactionTime trans_time:02 .
+
+client_trans:03
+  a ns0:Transaction ;
+  ns0:trans_client client:03 ;
+  ns0:trans_prod product:03 ;
+  ns0:trans_prod_quant "25" ;
+  ns0:trans_total_cost "9.25" ;
+  ns0:TransactionTime trans_time:03 .
+
+client_trans:04
+  a ns0:Transaction ;
+  ns0:trans_client client:04 ;
+  ns0:trans_prod product:04 ;
+  ns0:trans_prod_quant "250" ;
+  ns0:trans_total_cost "92.50" ;
+  ns0:TransactionTime trans_time:04 .
+
+client_trans:05
+  a ns0:Transaction ;
+  ns0:trans_client client:05 ;
+  ns0:trans_prod product:05 ;
+  ns0:trans_prod_quant "3" ;
+  ns0:trans_total_cost "5.10" ;
+  ns0:TransactionTime trans_time:05 .
+
+client_trans:06
+  a ns0:Transaction ;
+  ns0:trans_client client:06 ;
+  ns0:trans_prod product:06 ;
+  ns0:trans_prod_quant "4" ;
+  ns0:trans_total_cost "35.20" ;
+  ns0:TransactionTime trans_time:06 .
+
+client_trans:07
+  a ns0:Transaction ;
+  ns0:trans_client client:07 ;
+  ns0:trans_prod product:07 ;
+  ns0:trans_prod_quant "5" ;
+  ns0:trans_total_cost "5.50" ;
+  ns0:TransactionTime trans_time:07 .
+
+client_trans:08
+  a ns0:Transaction ;
+  ns0:trans_client client:08 ;
+  ns0:trans_prod product:08 ;
+  ns0:trans_prod_quant "4" ;
+  ns0:trans_total_cost "6.00" ;
+  ns0:TransactionTime trans_time:08 .
+
+client_trans:09
+  a ns0:Transaction ;
+  ns0:trans_client client:01 ;
+  ns0:trans_prod product:01 ;
+  ns0:trans_prod_quant "20" ;
+  ns0:trans_total_cost "2.05" ;
+  ns0:TransactionTime trans_time:09 .
+
+
+
+
+
+trans_time:01
+  a ns0:TransactionTime ;
+  ns0:trans_date "18/10/2017" ;
+  ns0:trans_time "17:32" .
+
+trans_time:02
+  a ns0:TransactionTime ;
+  ns0:trans_date "18/10/2017" ;
+  ns0:trans_time "17:40" .
+
+trans_time:03
+  a ns0:TransactionTime ;
+  ns0:trans_date "19/10/2017" ;
+  ns0:trans_time "10:00" .
+
+trans_time:04
+  a ns0:TransactionTime ;
+  ns0:trans_date "22/10/2017" ;
+  ns0:trans_time "12:16" .
+
+trans_time:05
+  a ns0:TransactionTime ;
+  ns0:trans_date "23/10/2017" ;
+  ns0:trans_time "09:48" .
+
+trans_time:06
+  a ns0:TransactionTime ;
+  ns0:trans_date "24/10/2017" ;
+  ns0:trans_time "15:20" .
+
+trans_time:07
+  a ns0:TransactionTime ;
+  ns0:trans_date "25/10/2017" ;
+  ns0:trans_time "12:20" .
+
+trans_time:08
+  a ns0:TransactionTime ;
+  ns0:trans_date "25/10/2017" ;
+  ns0:trans_time "10:03" .
+
+trans_time:09
+  a ns0:TransactionTime ;
+  ns0:trans_date "27/10/2017" ;
+  ns0:trans_time "16:00" .
+

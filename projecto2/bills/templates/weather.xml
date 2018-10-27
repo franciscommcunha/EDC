@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:georss="http://www.georss.org/georss" version="2.0">
+  <channel>
+    <atom:link href="http://open.live.bbc.co.uk/weather/feeds/en/2742611/3dayforecast.rss" rel="self" type="application/rss+xml" />
+    <title>BBC Weather - Forecast for  Aveiro, Portugal</title>
+    <link>http://www.bbc.co.uk/weather/2742611</link>
+    <description>3-day forecast for Aveiro from BBC Weather, including weather, temperature and wind information</description>
+    <language>en</language>
+    <copyright>Copyright: (C) British Broadcasting Corporation, see http://www.bbc.co.uk/terms/additional_rss.shtml for more details</copyright>
+    <pubDate>Thu, 14 Dec 2017 22:23:20 +0000</pubDate>
+    <image>
+      <title>BBC Weather - Forecast for  Aveiro, Portugal</title>
+      <url>http://static.bbci.co.uk/weather/0.3.203/images/icons/individual_57_icons/en_on_light_bg/12.gif</url>
+      <link>http://www.bbc.co.uk/weather/2742611</link>
+      <width>-1</width>
+      <height>-1</height>
+    </image>
+    <item>
+      <title>Thursday: Light Rain, Minimum Temperature: 12°C (54°F)</title>
+      <link>http://www.bbc.co.uk/weather/2742611?day=0</link>
+      <description>Minimum Temperature: 12°C (54°F), Wind Direction: West North Westerly, Wind Speed: 5mph, Visibility: Very Good, Pressure: 1023mb, Humidity: 92%, UV Risk: 2, Sunset: 17:08 WET</description>
+      <pubDate>Thu, 14 Dec 2017 16:19:55 +0000</pubDate>
+      <guid isPermaLink="false">http://www.bbc.co.uk/weather/2742611-0-2017-12-14T16:00:28.852Z</guid>
+      <georss:point>40.64427 -8.64554</georss:point>
+    </item>
+    <item>
+      <title>Friday: Light Cloud, Maximum Temperature: 14°C (57°F) Minimum Temperature: 6°C (43°F)</title>
+      <link>http://www.bbc.co.uk/weather/2742611?day=1</link>
+      <description>Maximum Temperature: 14°C (57°F), Minimum Temperature: 6°C (43°F), Wind Direction: Northerly, Wind Speed: 12mph, Visibility: Very Good, Pressure: 1018mb, Humidity: 74%, UV Risk: 2, Sunrise: 07:51 WET, Sunset: 17:08 WET</description>
+      <pubDate>Thu, 14 Dec 2017 22:23:20 +0000</pubDate>
+      <guid isPermaLink="false">http://www.bbc.co.uk/weather/2742611-1-2017-12-14T22:23:20.000Z</guid>
+      <georss:point>40.64427 -8.64554</georss:point>
+    </item>
+    <item>
+      <title>Saturday: Sunny, Maximum Temperature: 12°C (54°F) Minimum Temperature: 3°C (37°F)</title>
+      <link>http://www.bbc.co.uk/weather/2742611?day=2</link>
+      <description>Maximum Temperature: 12°C (54°F), Minimum Temperature: 3°C (37°F), Wind Direction: North North Easterly, Wind Speed: 9mph, Visibility: Very Good, Pressure: 1026mb, Humidity: 62%, UV Risk: 2, Sunrise: 07:52 WET, Sunset: 17:08 WET</description>
+      <pubDate>Thu, 14 Dec 2017 22:23:20 +0000</pubDate>
+      <guid isPermaLink="false">http://www.bbc.co.uk/weather/2742611-2-2017-12-14T22:23:20.000Z</guid>
+      <georss:point>40.64427 -8.64554</georss:point>
+    </item>
+  </channel>
+</rss>
+

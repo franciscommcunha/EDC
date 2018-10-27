@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Adicionar produto</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    {% load staticfiles %}
+    <link rel="stylesheet" href="{%static '/assets/css/main.css' %}">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+</head>
+
+
+<body class="homepage">
+		<div id="page-wrapper">
+
+		<!-- Header -->
+			<div id="header-wrapper">
+
+				<div id="header" class="container" style="width: 100%">
+					<h1 style="margin-top:-100px;"> Adicionar produto</h1>
+					<br>
+					<li>
+					<br>
+					<br>
+					
+				<!-- Nav -->
+				<nav id="nav" style="margin-top: -15px;">
+							<ul>
+								<li>
+									<a class="icon fa-home" href="/">
+										<span>Home</span>
+									</a>
+								</li>
+								<li>
+									<a href="/add_client" class="fa fa-user-plus" aria-hidden="true">
+										<span>Adicionar cliente</span>
+									</a>
+								</li>
+
+								<li>
+									<a href="/list_clients" class="fa fa-user" aria-hidden="true">
+										<span>Listar clientes</span>
+									</a>
+								</li>
+								
+								<li>
+									<a href="/add_product" class="fa fa-cart-plus" aria-hidden="true">
+										<span>Adicionar produto</span>
+									</a>
+								</li>
+
+								<li>
+									<a href="/list_products" class="fa fa-shopping-cart" aria-hidden="true">
+										<span>Listar produtos</span>
+									</a>
+								</li>
+
+                                <li>
+                                    <a href="/add_sale" class="fa fa-shopping-bag" aria-hidden="true">
+                                        <span>Adicionar venda</span>
+                                    </a>
+                                </li>
+
+                                 <li>
+                                    <a href="/list_sales" class="fa fa-money" aria-hidden="true">
+                                        <span>Listar vendas</span>
+                                    </a>
+                                </li>
+
+								
+							</ul>
+					</nav>
+					<div class="container" style="text-align: center;width: 350px;">
+						<form class="pure-form pure-form-aligned" method="post">
+						    <fieldset>
+                                {% csrf_token %}
+						        <div class="pure-control-group">
+						            <label for="name">Nome do produto<a style="color: red">*</a></label>
+						            <input name="name">
+						        </div>
+                                <br/>
+						        <div class="pure-control-group">
+						            <label for="email">Custo<a style="color: red">*</a></label>
+						            <input name="cost">
+						        </div>
+                                <br/>
+						        <div class="pure-control-group">
+						            <label for="foo">Tipo de Taxa<a style="color: red">*</a></label>
+						            <input name="type">
+						        </div>
+                                <br/>
+						 		<div class="pure-control-group">
+						            <label for="email">Descrição<a style="color: red">*</a></label>
+						            <input name="description">
+						        </div>
+                                <br/>
+                                <br/>
+						        <div class="pure-controls">
+						        	<br>
+						            <button type="submit" class="pure-button pure-button-primary">Save</button>
+						        </div>
+						    </fieldset>
+						</form>
+                        <p style="color: red">Campos marcados com * são obrigatórios</p>
+                        {% if error == False %}
+                        <div class="w3-panel w3-green w3-xlarge w3-display-container">
+                          <span onclick="this.parentElement.style.display='none'" class="w3-button w3-green w3-large w3-display-right">&times;</span>
+                          <strong>Success!</strong> The data was correctly inserted.
+                        </div>
+                        {% elif error == True %}
+                        <div class="w3-panel w3-red w3-xlarge w3-display-container">
+                          <span onclick="this.parentElement.style.display='none'" class="w3-button w3-red w3-large w3-display-right">&times;</span>
+                          <strong style="color: white">Error!</strong> The data was not inserted.
+                        </div>
+                        {% endif %}
+					</div>
+				</div>
+			</div>
+		</div>
+</body>

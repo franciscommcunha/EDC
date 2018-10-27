@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>{{ name }}</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    {% load staticfiles %}
+    <link rel="stylesheet" href="{%static '/assets/css/main.css' %}">
+
+    <script type="text/javascript">
+    	function inputForm(){
+        	var input = document.getElementById("input_submit");
+        	input.click();
+        	console.log("input");
+        }
+    </script>
+
+</head>
+
+
+<body class="homepage">
+		<div id="page-wrapper">
+
+		<!-- Header -->
+			<div id="header-wrapper">
+
+				<div id="header" class="container" style="width: 100%">
+					<h1  style="margin-top:-100px;line-height: 100%;">{{ Name }}</h1>
+					<br>
+					<li>
+					<br>
+					<br>
+								<!-- Nav -->
+				<nav id="nav" style="margin-top: -15px;">
+							<ul>
+								<li>
+									<a class="icon fa-home" href="/">
+										<span>Home</span>
+									</a>
+								</li>
+								<li>
+									<a href="/add_client" class="fa fa-user-plus" aria-hidden="true">
+										<span>Adicionar cliente</span>
+									</a>
+								</li>
+
+								<li>
+									<a href="/list_clients" class="fa fa-user" aria-hidden="true">
+										<span>Listar clientes</span>
+									</a>
+								</li>
+
+								<li>
+									<a href="/add_product" class="fa fa-cart-plus" aria-hidden="true">
+										<span>Adicionar produto</span>
+									</a>
+								</li>
+
+								<li>
+									<a href="/list_products" class="fa fa-shopping-cart" aria-hidden="true">
+										<span>Listar produtos</span>
+									</a>
+								</li>
+
+                                <li>
+                                    <a href="/add_sale" class="fa fa-shopping-bag" aria-hidden="true">
+                                        <span>Adicionar venda</span>
+                                    </a>
+                                </li>
+
+                                 <li>
+                                    <a href="/list_sales" class="fa fa-money" aria-hidden="true">
+                                        <span>Listar vendas</span>
+                                    </a>
+                                </li>
+
+
+							</ul>
+					</nav>
+					
+					<div class="container" style="text-align: center;width: 700px;">
+						<form class="pure-form pure-form-aligned" action="{% url 'save_client_info' %}" method="post">
+							{% csrf_token %}
+							    <div align="center" id="customer_table">
+							    <style>
+							    th{
+							    	    background-color: #ed786a;
+									    border: none;
+									    color: white;
+									    padding: 10px;
+									    text-align: center;
+									    text-shadow: 1px 1px 1px ;
+									    white-space: nowrap;
+							    }
+							    td {
+								    border-bottom: solid 1px #DDEFEF;
+								    color: #333;
+								    padding: 10px;
+								    text-shadow: 1px 1px 1px #fff;
+								    white-space: nowrap;
+								}
+							    </style>
+
+						        <table align="center" style="border: solid black">
+						        	<thead>
+						        	<style>
+						        	tr{
+						        		border: solid black;
+						        	}
+						        	td{
+						        		border: solid black;
+						        	}
+						        	</style>
+						        		
+						        		<tr>
+						        			<th> ID </th>
+						        			<td style="text-align: center">
+						        				{{ID}}
+                                                <input type="text" name="ID" value="{{ID}}" style="display: none"> </input>
+						        			</td>
+						        		</tr>
+						        		<tr>
+						        			<th> Address </th>
+						        			<td>
+						        				<input type="text" name="Address" value="{{Address}}"> </input>
+						        			</td>
+						        		</tr>
+						        		<tr>
+						        			<th> City </th>
+						        			<td>
+						        				<input type="text" name="City" value="{{City}}"/>
+						        			</td>
+						        		</tr>
+						        		<tr>
+						        			<th> Postal-code </th>
+						        			<td>
+						        			<input type="text" name="PostalCode" value="{{PostalCode}}"/>
+						        			</td>
+						        		</tr>
+						        		<tr>
+						        			<th> Region</th>
+						        			<td> 
+						        			<input type="text" name="Region" value="{{Region}}"/>
+						        			</td>
+						        		</tr>
+						        		<tr>
+						        			<th> Country </th>
+						        			<td>
+						        				<input type="text" name="Country" value="{{Country}}"/>
+						        			</td>
+						        		</tr>
+						        		<tr>
+						        			<th> Telephone </th>
+						        			<td> 
+												<input type="text" name="Telephone" value="{{Telephone}}"/>
+						        			</td>
+						        		</tr>
+						        		<tr>
+						        			<th> Fax </th>
+						        			<td>
+						        				<input type="text" name="Fax" value="{{Fax}}"/>
+						        			</td>
+						        		</tr>
+						        		<tr>
+						        			<th> Email </th>
+						        			<td> 
+						        			<input type="text" name="Email" value="{{Email}}"/>
+						        			</td>
+						        		</tr>
+						        	</thead>
+						            		                
+						        </table>
+						        				        	
+				        	<input id="input_submit" type="hidden" value="{{Name}}" name="Name"> 
+				        		<button onclick="inputForm()"> Save </button>
+				        	</input> 
+				        	<input type="hidden" name="ID" value="{{ID}}"> 
+
+						    </div>
+						</form>
+
+					</div>
+					
+				</div>
+			</div>
+		</div>
+</body>

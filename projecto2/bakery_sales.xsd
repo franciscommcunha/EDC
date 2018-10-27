@@ -1,0 +1,331 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="CompanySales" type="CompanySalesType"/>
+  <xs:complexType name="ClientType">
+    <xs:sequence>
+      <xs:element name="ClientID">
+        <xs:simpleType>
+          <xs:restriction base="xs:string">
+            <xs:enumeration value="01"/>
+            <xs:enumeration value="02"/>
+            <xs:enumeration value="03"/>
+            <xs:enumeration value="04"/>
+            <xs:enumeration value="05"/>
+            <xs:enumeration value="06"/>
+            <xs:enumeration value="07"/>
+            <xs:enumeration value="08"/>
+            <xs:enumeration value="09"/>
+            <xs:enumeration value="10"/>
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:element>
+      <xs:element name="ClientName">
+        <xs:simpleType>
+          <xs:restriction base="xs:string">
+            <xs:enumeration value="Agrupamento de Escolas de Ovar"/>
+            <xs:enumeration value="Agrupamento de Escolas Ovar Sul"/>
+            <xs:enumeration value="Confeitaria Convívio 2 Paiva e Correia L.da"/>
+            <xs:enumeration value="Restaurante Paradise"/>
+            <xs:enumeration value=" Junta Freguesia de Válega "/>
+            <xs:enumeration value="Estabelecimentos Alentejano António Álvaro da Silva Matos"/>
+            <xs:enumeration value=" Centro Cultural e Recrea. de Válega "/>
+            <xs:enumeration value=" I.V.S. Irmaos Vaz e Silva e C  Lda "/>
+            <xs:enumeration value="Casa Alentejana - Ovar Rijo Freire e Silva"/>
+            <xs:enumeration value="A.D.O. Basquetebol"/>
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:element>
+      <xs:element type="ClientAddressType" name="ClientAddress"/>
+      <xs:element type="ClientContactType" name="ClientContact"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="TransactionType">
+    <xs:sequence>
+      <xs:element name="TransactionID">
+        <xs:simpleType>
+          <xs:restriction base="xs:string">
+            <xs:enumeration value=" 01 "/>
+            <xs:enumeration value=" 02 "/>
+            <xs:enumeration value=" 03 "/>
+            <xs:enumeration value=" 04 "/>
+            <xs:enumeration value=" 05 "/>
+            <xs:enumeration value=" 06 "/>
+            <xs:enumeration value=" 07 "/>
+            <xs:enumeration value=" 08 "/>
+            <xs:enumeration value=" 09 "/>
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:element>
+      <xs:element name="ClientID">
+        <xs:simpleType>
+          <xs:restriction base="xs:string">
+            <xs:enumeration value=" 01 "/>
+            <xs:enumeration value=" 02 "/>
+            <xs:enumeration value=" 03 "/>
+            <xs:enumeration value=" 04 "/>
+            <xs:enumeration value=" 05 "/>
+            <xs:enumeration value=" 06 "/>
+            <xs:enumeration value=" 07 "/>
+            <xs:enumeration value=" 08 "/>
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:element>
+      <xs:element name="ClientName">
+        <xs:simpleType>
+          <xs:restriction base="xs:string">
+            <xs:enumeration value="Agrupamento de Escolas de Ovar"/>
+            <xs:enumeration value="Agrupamento de Escolas Ovar Sul"/>
+            <xs:enumeration value="Confeitaria Convívio 2 Paiva e Correia L.da"/>
+            <xs:enumeration value="Restaurante Paradise"/>
+            <xs:enumeration value=" Junta Freguesia de Válega "/>
+            <xs:enumeration value="Estabelecimentos Alentejano António Álvaro da Silva Matos"/>
+            <xs:enumeration value=" Centro Cultural e Recrea. de Válega "/>
+            <xs:enumeration value=" I.V.S. Irmaos Vaz e Silva e C  Lda "/>
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:element>
+      <xs:element name="ProductID">
+        <xs:simpleType>
+          <xs:restriction base="xs:string">
+            <xs:enumeration value=" 01 "/>
+            <xs:enumeration value=" 02 "/>
+            <xs:enumeration value=" 03 "/>
+            <xs:enumeration value=" 04 "/>
+            <xs:enumeration value=" 05 "/>
+            <xs:enumeration value=" 06 "/>
+            <xs:enumeration value=" 07 "/>
+            <xs:enumeration value=" 08 "/>
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:element>
+      <xs:element name="ProductName">
+        <xs:simpleType>
+          <xs:restriction base="xs:string">
+            <xs:enumeration value="Pão"/>
+            <xs:enumeration value="Pastéis"/>
+            <xs:enumeration value="Croissant"/>
+            <xs:enumeration value="Bicos de Pato"/>
+            <xs:enumeration value="Broa de Milho"/>
+            <xs:enumeration value="Bolo Rei"/>
+            <xs:enumeration value="Regueifa"/>
+            <xs:enumeration value="Pão de forma"/>
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:element>
+      <xs:element name="ProductQuantity">
+        <xs:simpleType>
+          <xs:restriction base="xs:string">
+            <xs:enumeration value=" 10 "/>
+            <xs:enumeration value=" 5 "/>
+            <xs:enumeration value=" 25 "/>
+            <xs:enumeration value=" 250 "/>
+            <xs:enumeration value=" 3 "/>
+            <xs:enumeration value=" 4 "/>
+            <xs:enumeration value=" 20 "/>
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:element>
+      <xs:element name="TotalCost">
+        <xs:simpleType>
+          <xs:restriction base="xs:string">
+            <xs:enumeration value=" 1.05 "/>
+            <xs:enumeration value=" 2.00 "/>
+            <xs:enumeration value=" 9.25 "/>
+            <xs:enumeration value=" 92.50 "/>
+            <xs:enumeration value=" 5.10 "/>
+            <xs:enumeration value=" 35.20 "/>
+            <xs:enumeration value=" 5.50 "/>
+            <xs:enumeration value=" 6.00 "/>
+            <xs:enumeration value=" 2.05 "/>
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:element>
+      <xs:element type="TransactionTimeType" name="TransactionTime"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="ContactType">
+    <xs:sequence>
+      <xs:element type="xs:string" name="Telephone"/>
+      <xs:element type="xs:string" name="Fax"/>
+      <xs:element type="xs:string" name="Email"/>
+      <xs:element type="xs:string" name="Website"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="TransactionTimeType">
+    <xs:sequence>
+      <xs:element name="Date">
+        <xs:simpleType>
+          <xs:restriction base="xs:string">
+            <xs:enumeration value=" 18/10/2017 "/>
+            <xs:enumeration value=" 22/10/2017 "/>
+            <xs:enumeration value=" 17/10/2017 "/>
+            <xs:enumeration value=" 24/10/2017 "/>
+            <xs:enumeration value=" 16/10/2017 "/>
+            <xs:enumeration value=" 24/12/2017 "/>
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:element>
+      <xs:element name="Time">
+        <xs:simpleType>
+          <xs:restriction base="xs:string">
+            <xs:enumeration value=" 16:00 "/>
+            <xs:enumeration value=" 17:32 "/>
+            <xs:enumeration value=" 12:32 "/>
+            <xs:enumeration value=" 17:19 "/>
+            <xs:enumeration value=" 15:20 "/>
+            <xs:enumeration value=" 12:20 "/>
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="ProductType">
+    <xs:sequence>
+      <xs:element type="xs:string" name="ProductID"/>
+      <xs:element type="xs:string" name="ProductName"/>
+      <xs:element type="xs:string" name="UnitCost"/>
+      <xs:element type="TaxType" name="Tax"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="CompanyType">
+    <xs:sequence>
+      <xs:element type="xs:string" name="CompanyId"/>
+      <xs:element type="xs:string" name="TaxRegistrationNumber"/>
+      <xs:element type="xs:string" name="CompanyName"/>
+      <xs:element type="xs:string" name="BusinessName"/>
+      <xs:element type="xs:string" name="CurrencyCode"/>
+      <xs:element type="AddressType" name="Address"/>
+      <xs:element type="ContactType" name="Contact"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="ClientContactType">
+    <xs:sequence>
+      <xs:element name="Telephone">
+        <xs:simpleType>
+          <xs:restriction base="xs:string">
+            <xs:enumeration value="256581000"/>
+            <xs:enumeration value="256502347"/>
+            <xs:enumeration value=" "/>
+            <xs:enumeration value="256575661"/>
+            <xs:enumeration value="256502090"/>
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:element>
+      <xs:element name="Fax">
+        <xs:simpleType>
+          <xs:restriction base="xs:string">
+            <xs:enumeration value="256586411"/>
+            <xs:enumeration value="256503246"/>
+            <xs:enumeration value=" "/>
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:element>
+      <xs:element name="Email">
+        <xs:simpleType>
+          <xs:restriction base="xs:string">
+            <xs:enumeration value="esjmf@portugalmail.pt"/>
+            <xs:enumeration value=" "/>
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="CompanyProductsType">
+    <xs:choice maxOccurs="unbounded" minOccurs="0">
+      <xs:element type="ProductType" name="Product"/>
+    </xs:choice>
+  </xs:complexType>
+  <xs:complexType name="TaxType">
+    <xs:sequence>
+      <xs:element type="xs:string" name="TaxType"/>
+      <xs:element name="Description">
+        <xs:simpleType>
+          <xs:restriction base="xs:string">
+            <xs:enumeration value="Taxa Reduzida"/>
+            <xs:enumeration value="Taxa Normal"/>
+            <xs:enumeration value="Taxa Intermedia"/>
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:element>
+      <xs:element name="TaxPercentage">
+        <xs:simpleType>
+          <xs:restriction base="xs:string">
+            <xs:enumeration value="6"/>
+            <xs:enumeration value="23"/>
+            <xs:enumeration value="13"/>
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="CompanyClientsType">
+    <xs:sequence>
+      <xs:element type="ClientType" name="Client" maxOccurs="unbounded" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="ClientsTransactionsType">
+    <xs:sequence>
+      <xs:element type="TransactionType" name="Transaction" maxOccurs="unbounded" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="ClientAddressType">
+    <xs:sequence>
+      <xs:element name="AddressDetail">
+        <xs:simpleType>
+          <xs:restriction base="xs:string">
+            <xs:enumeration value="R. Dom Dinis"/>
+            <xs:enumeration value="R. Irmãos Oliveira Lopes"/>
+            <xs:enumeration value="Rua das Palreiras - Válega"/>
+            <xs:enumeration value="Rua Alexandre Herculano"/>
+            <xs:enumeration value="Av. Comendador António Augusto da Silva"/>
+            <xs:enumeration value="Rua das Estradas nº 678"/>
+            <xs:enumeration value="Rua do Centro Cultural e Recreativo de Válega"/>
+            <xs:enumeration value="Rua da Ponte Pedra Válega"/>
+            <xs:enumeration value="Ovar"/>
+            <xs:enumeration value=" Ovar "/>
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:element>
+      <xs:element name="City">
+        <xs:simpleType>
+          <xs:restriction base="xs:string">
+            <xs:enumeration value="Ovar"/>
+            <xs:enumeration value="Válega"/>
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:element>
+      <xs:element name="PostalCode">
+        <xs:simpleType>
+          <xs:restriction base="xs:string">
+            <xs:enumeration value="3880-000"/>
+            <xs:enumeration value="3880-192"/>
+            <xs:enumeration value="3880-508"/>
+            <xs:enumeration value="3880-503"/>
+            <xs:enumeration value="3880-549"/>
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:element>
+      <xs:element type="xs:string" name="Region"/>
+      <xs:element type="xs:string" name="Country"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="AddressType">
+    <xs:sequence>
+      <xs:element type="xs:string" name="BuildingNumber"/>
+      <xs:element type="xs:string" name="StreetName"/>
+      <xs:element type="xs:string" name="AddressDetail"/>
+      <xs:element type="xs:string" name="City"/>
+      <xs:element type="xs:string" name="PostalCode"/>
+      <xs:element type="xs:string" name="Region"/>
+      <xs:element type="xs:string" name="Country"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="CompanySalesType">
+    <xs:sequence>
+      <xs:element type="CompanyType" name="Company"/>
+      <xs:element type="CompanyProductsType" name="CompanyProducts"/>
+      <xs:element type="CompanyClientsType" name="CompanyClients"/>
+      <xs:element type="ClientsTransactionsType" name="ClientsTransactions"/>
+    </xs:sequence>
+  </xs:complexType>
+</xs:schema>
