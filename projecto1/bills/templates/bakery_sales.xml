@@ -1,0 +1,536 @@
+<?xml version="1.0"?>
+<!--
+Sites visited:
+https://msdn.microsoft.com/en-us/library/ms757863(v=vs.85).aspx
+Slides visited:
+edc.02d.pdf
+-->
+<CompanySales xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="bakery_sales.xsd">
+	<Company>
+		<CompanyId> 513581332 </CompanyId>
+		<TaxRegistrationNumber> 513581332 </TaxRegistrationNumber>
+		<CompanyName> PADARIA PASTELARIA SARGACAL LDA.  </CompanyName>
+		<BusinessName> PADARIA PASTELARIA SARGACAL LDA. </BusinessName>
+		<CurrencyCode>EUR</CurrencyCode>
+		<Address>
+			<BuildingNumber> </BuildingNumber>
+			<StreetName> </StreetName>
+			<AddressDetail>RUA 15 DE MAIO, 735</AddressDetail>
+			<City>Válega</City>
+			<PostalCode>3880-503</PostalCode>
+			<Region> </Region>
+			<Country>PT</Country>
+		</Address>
+		<Contact>
+			<Telephone> </Telephone>
+			<Fax> </Fax>
+			<Email> </Email>
+			<Website> </Website>
+		</Contact>
+	</Company>
+
+	<CompanyProducts>
+		<Product>
+			<ProductID>01</ProductID>
+			<ProductName>Pão</ProductName>
+			<UnitCost>0.105</UnitCost>
+            <Tax>
+                <TaxType>IVA</TaxType>
+                <Description>Taxa Reduzida</Description>
+                <TaxPercentage>6</TaxPercentage>
+            </Tax>
+		</Product>
+
+		<Product>
+			<ProductID>02</ProductID>
+			<ProductName>Pastéis</ProductName>
+			<UnitCost>0.40</UnitCost>
+           <Tax>
+                <TaxType>IVA</TaxType>
+                <Description>Taxa Normal</Description>
+                <TaxPercentage>23</TaxPercentage>
+            </Tax>
+		</Product>
+
+		<Product>
+			<ProductID>03</ProductID>
+			<ProductName>Croissant</ProductName>
+			<UnitCost>0.37</UnitCost>
+            <Tax>
+                <TaxType>IVA</TaxType>
+                <Description>Taxa Reduzida</Description>
+                <TaxPercentage>6</TaxPercentage>
+            </Tax>
+		</Product>
+
+		<Product>
+			<ProductID>04</ProductID>
+			<ProductName>Bicos de Pato</ProductName>
+			<UnitCost>0.37</UnitCost>
+            <Tax>
+                <TaxType>IVA</TaxType>
+                <Description>Taxa Reduzida</Description>
+                <TaxPercentage>6</TaxPercentage>
+            </Tax>
+		</Product>
+
+		<Product>
+			<ProductID>05</ProductID>
+			<ProductName>Broa de Milho</ProductName>
+			<UnitCost>1.70</UnitCost>
+            <Tax>
+                <TaxType>IVA</TaxType>
+                <Description>Taxa Reduzida</Description>
+                <TaxPercentage>6</TaxPercentage>
+            </Tax>
+		</Product>
+
+		<Product>
+			<ProductID>06</ProductID>
+			<ProductName>Bolo Rei</ProductName>
+			<UnitCost>8.80</UnitCost>
+            <Tax>
+                <TaxType>IVA</TaxType>
+                <Description>Taxa Normal</Description>
+                <TaxPercentage>23</TaxPercentage>
+            </Tax>
+		</Product>
+
+		<Product>
+			<ProductID>07</ProductID>
+			<ProductName>Regueifa</ProductName>
+			<UnitCost>1.10</UnitCost>
+            <Tax>
+                <TaxType>IVA</TaxType>
+                <Description>Taxa Reduzida</Description>
+                <TaxPercentage>6</TaxPercentage>
+            </Tax>
+		</Product>
+
+		<Product>
+			<ProductID>08</ProductID>
+			<ProductName>Pão de forma</ProductName>
+			<UnitCost>1.50</UnitCost>
+            <Tax>
+                <TaxType>IVA</TaxType>
+                <Description>Taxa Reduzida</Description>
+                <TaxPercentage>6</TaxPercentage>
+            </Tax>
+		</Product>
+
+		<Product>
+			<ProductID>09</ProductID>
+			<ProductName>Pão de ló de Ovar</ProductName>
+			<UnitCost>10.00</UnitCost>
+            <Tax>
+                <TaxType>IVA</TaxType>
+                <Description>Taxa Normal</Description>
+                <TaxPercentage>23</TaxPercentage>
+            </Tax>
+		</Product>
+
+		<Product>
+			<ProductID>10</ProductID>
+			<ProductName> Sandes queijo fiambre </ProductName>
+			<UnitCost>0.75</UnitCost>
+            <Tax>
+                <TaxType>IVA</TaxType>
+                <Description>Taxa Normal</Description>
+                <TaxPercentage>23</TaxPercentage>
+            </Tax>
+		</Product>
+
+		<Product>
+			<ProductID>11</ProductID>
+			<ProductName> Água mineral sem gás </ProductName>
+			<UnitCost>0.40</UnitCost>
+            <Tax>
+                <TaxType>IVA</TaxType>
+                <Description>Taxa Reduzida</Description>
+                <TaxPercentage>6</TaxPercentage>
+            </Tax>
+		</Product>
+
+        <Product>
+			<ProductID>12</ProductID>
+			<ProductName> Bolo de aniversário </ProductName>
+			<UnitCost>9.50</UnitCost>
+            <Tax>
+                <TaxType>IVA</TaxType>
+                <Description>Taxa Normal</Description>
+                <TaxPercentage>23</TaxPercentage>
+            </Tax>
+		</Product>
+
+        <Product>
+			<ProductID>13</ProductID>
+			<ProductName> Pão da avó </ProductName>
+			<UnitCost>1.65</UnitCost>
+            <Tax>
+                <TaxType>IVA</TaxType>
+                <Description>Taxa Reduzida</Description>
+                <TaxPercentage>6</TaxPercentage>
+            </Tax>
+		</Product>
+
+        <Product>
+			<ProductID>14</ProductID>
+			<ProductName> Pão de mistura </ProductName>
+			<UnitCost>0.105</UnitCost>
+            <Tax>
+                <TaxType>IVA</TaxType>
+                <Description>Taxa Reduzida</Description>
+                <TaxPercentage>6</TaxPercentage>
+            </Tax>
+		</Product>
+
+        <Product>
+			<ProductID>15</ProductID>
+			<ProductName> Pão integral </ProductName>
+			<UnitCost>0.105</UnitCost>
+            <Tax>
+                <TaxType>IVA</TaxType>
+                <Description>Taxa Reduzida</Description>
+                <TaxPercentage>6</TaxPercentage>
+            </Tax>
+		</Product>
+
+        <Product>
+			<ProductID>16</ProductID>
+			<ProductName> Fogaças </ProductName>
+			<UnitCost>3.50</UnitCost>
+            <Tax>
+                <TaxType>IVA</TaxType>
+                <Description>Taxa Intermedia</Description>
+                <TaxPercentage>13</TaxPercentage>
+            </Tax>
+		</Product>
+
+        <Product>
+			<ProductID>17</ProductID>
+			<ProductName> Folares </ProductName>
+			<UnitCost>6.00</UnitCost>
+            <Tax>
+                <TaxType>IVA</TaxType>
+                <Description>Taxa Intermedia</Description>
+                <TaxPercentage>13</TaxPercentage>
+            </Tax>
+		</Product>
+
+        <Product>
+			<ProductID>18</ProductID>
+			<ProductName> Miniaturas de pasteis </ProductName>
+			<UnitCost>0.35</UnitCost>
+            <Tax>
+                <TaxType>IVA</TaxType>
+                <Description>Taxa Normal</Description>
+                <TaxPercentage>23</TaxPercentage>
+            </Tax>
+		</Product>
+
+	</CompanyProducts>
+
+	<CompanyClients>
+		<Client>
+			<ClientID>01</ClientID>
+			<ClientName>Agrupamento de Escolas de Ovar</ClientName>
+			<ClientAddress>
+				<AddressDetail>R. Dom Dinis</AddressDetail>
+				<City>Ovar</City>
+				<PostalCode>3880-000</PostalCode>
+				<Region> </Region>
+				<Country>PT</Country>
+			</ClientAddress>
+			<ClientContact>
+				<Telephone>256581000</Telephone>
+				<Fax>256586411</Fax>
+				<Email>esjmf@portugalmail.pt</Email>
+			</ClientContact>
+		</Client>
+
+		<Client>
+			<ClientID>02</ClientID>
+			<ClientName>Agrupamento de Escolas Ovar Sul</ClientName>
+			<ClientAddress>
+				<AddressDetail>R. Irmãos Oliveira Lopes</AddressDetail>
+				<City>Ovar</City>
+				<PostalCode>3880-192</PostalCode>
+				<Region> </Region>
+				<Country>PT</Country>
+			</ClientAddress>
+			<ClientContact>
+				<Telephone>256502347</Telephone>
+				<Fax>256503246</Fax>
+				<Email> </Email>
+			</ClientContact>
+		</Client>
+
+		<Client>
+			<ClientID>03</ClientID>
+			<ClientName>Confeitaria Convívio 2 Paiva e Correia L.da</ClientName>
+			<ClientAddress>
+				<AddressDetail>Rua das Palreiras - Válega</AddressDetail>
+				<City>Ovar</City>
+				<PostalCode>3880-000</PostalCode>
+				<Region> </Region>
+				<Country>PT</Country>
+			</ClientAddress>
+			<ClientContact>
+				<Telephone> </Telephone>
+				<Fax> </Fax>
+				<Email> </Email>
+			</ClientContact>
+		</Client>
+
+		<Client>
+			<ClientID>04</ClientID>
+			<ClientName>Restaurante Paradise</ClientName>
+			<ClientAddress>
+				<AddressDetail>Rua Alexandre Herculano</AddressDetail>
+				<City>Ovar</City>
+				<PostalCode>3880-000</PostalCode>
+				<Region> </Region>
+				<Country>PT</Country>
+			</ClientAddress>
+			<ClientContact>
+				<Telephone>256575661</Telephone>
+				<Fax> </Fax>
+				<Email> </Email>
+			</ClientContact>
+		</Client>
+
+		<Client>
+			<ClientID>05</ClientID>
+			<ClientName> Junta Freguesia de Válega </ClientName>
+			<ClientAddress>
+				<AddressDetail>Av. Comendador António Augusto da Silva</AddressDetail>
+				<City>Válega</City>
+				<PostalCode>3880-000</PostalCode>
+				<Region> </Region>
+				<Country>PT</Country>
+			</ClientAddress>
+			<ClientContact>
+				<Telephone>256575661</Telephone>
+				<Fax> </Fax>
+				<Email> </Email>
+			</ClientContact>
+		</Client>
+
+		<Client>
+			<ClientID>06</ClientID>
+			<ClientName>Estabelecimentos Alentejano António Álvaro da Silva Matos</ClientName>
+			<ClientAddress>
+				<AddressDetail>Rua das Estradas nº 678</AddressDetail>
+				<City>Válega</City>
+				<PostalCode>3880-508</PostalCode>
+				<Region> </Region>
+				<Country>PT</Country>
+			</ClientAddress>
+			<ClientContact>
+				<Telephone>256502090</Telephone>
+				<Fax> </Fax>
+				<Email> </Email>
+			</ClientContact>
+		</Client>
+
+		<Client>
+			<ClientID>07</ClientID>
+			<ClientName> Centro Cultural e Recrea. de Válega </ClientName>
+			<ClientAddress>
+				<AddressDetail>Rua do Centro Cultural e Recreativo de Válega</AddressDetail>
+				<City>Válega</City>
+				<PostalCode>3880-503</PostalCode>
+				<Region> </Region>
+				<Country>PT</Country>
+			</ClientAddress>
+			<ClientContact>
+				<Telephone> </Telephone>
+				<Fax> </Fax>
+				<Email> </Email>
+			</ClientContact>
+		</Client>
+
+		<Client>
+			<ClientID>08</ClientID>
+			<ClientName> I.V.S. Irmaos Vaz e Silva e C  Lda </ClientName>
+			<ClientAddress>
+				<AddressDetail>Rua da Ponte Pedra Válega</AddressDetail>
+				<City>Ovar</City>
+				<PostalCode>3880-549</PostalCode>
+				<Region> </Region>
+				<Country>PT</Country>
+			</ClientAddress>
+			<ClientContact>
+				<Telephone> </Telephone>
+				<Fax> </Fax>
+				<Email> </Email>
+			</ClientContact>
+		</Client>
+
+		<Client>
+			<ClientID>09</ClientID>
+			<ClientName>Casa Alentejana - Ovar Rijo Freire e Silva</ClientName>
+			<ClientAddress>
+				<AddressDetail>Ovar</AddressDetail>
+				<City>Ovar</City>
+				<PostalCode>3880-508</PostalCode>
+				<Region> </Region>
+				<Country>PT</Country>
+			</ClientAddress>
+			<ClientContact>
+				<Telephone> </Telephone>
+				<Fax> </Fax>
+				<Email> </Email>
+			</ClientContact>
+		</Client>
+
+		<Client>
+			<ClientID>10</ClientID>
+			<ClientName>A.D.O. Basquetebol</ClientName>
+			<ClientAddress>
+				<AddressDetail> Ovar </AddressDetail>
+				<City>Ovar</City>
+				<PostalCode>3880-000</PostalCode>
+				<Region> </Region>
+				<Country>PT</Country>
+			</ClientAddress>
+			<ClientContact>
+				<Telephone> </Telephone>
+				<Fax> </Fax>
+				<Email> </Email>
+			</ClientContact>
+		</Client>
+
+	</CompanyClients>
+
+	<ClientsTransactions>
+
+		<Transaction>
+			<TransactionID> 01 </TransactionID>
+			<ClientID> 01 </ClientID>
+            <ClientName>Agrupamento de Escolas de Ovar</ClientName>
+			<ProductID> 01 </ProductID>
+            <ProductName>Pão</ProductName>
+			<ProductQuantity> 10 </ProductQuantity>
+			<TotalCost> 1.05 </TotalCost>
+			<TransactionTime>
+				<Date> 18/10/2017 </Date>
+				<Time> 16:00 </Time>
+			</TransactionTime>
+		</Transaction>
+
+		<Transaction>
+			<TransactionID> 02 </TransactionID>
+			<ClientID> 02 </ClientID>
+            <ClientName>Agrupamento de Escolas Ovar Sul</ClientName>
+			<ProductID> 02 </ProductID>
+            <ProductName>Pastéis</ProductName>
+			<ProductQuantity> 5 </ProductQuantity>
+			<TotalCost> 2.00 </TotalCost>
+			<TransactionTime>
+				<Date> 18/10/2017 </Date>
+				<Time> 17:32 </Time>
+			</TransactionTime>
+		</Transaction>
+
+		<Transaction>
+			<TransactionID> 03 </TransactionID>
+			<ClientID> 03 </ClientID>
+            <ClientName>Confeitaria Convívio 2 Paiva e Correia L.da</ClientName>
+			<ProductID> 03 </ProductID>
+            <ProductName>Croissant</ProductName>
+			<ProductQuantity> 25 </ProductQuantity>
+			<TotalCost> 9.25 </TotalCost>
+			<TransactionTime>
+				<Date> 18/10/2017 </Date>
+				<Time> 17:32 </Time>
+			</TransactionTime>
+		</Transaction>
+
+		<Transaction>
+			<TransactionID> 04 </TransactionID>
+			<ClientID> 04 </ClientID>
+            <ClientName>Restaurante Paradise</ClientName>
+			<ProductID> 04 </ProductID>
+            <ProductName>Bicos de Pato</ProductName>
+			<ProductQuantity> 250 </ProductQuantity>
+			<TotalCost> 92.50 </TotalCost>
+			<TransactionTime>
+				<Date> 22/10/2017 </Date>
+				<Time> 12:32 </Time>
+			</TransactionTime>
+		</Transaction>
+
+		<Transaction>
+			<TransactionID> 05 </TransactionID>
+			<ClientID> 05 </ClientID>
+            <ClientName> Junta Freguesia de Válega </ClientName>
+			<ProductID> 05 </ProductID>
+            <ProductName>Broa de Milho</ProductName>
+			<ProductQuantity> 3 </ProductQuantity>
+			<TotalCost> 5.10 </TotalCost>
+			<TransactionTime>
+				<Date> 17/10/2017 </Date>
+				<Time> 17:19 </Time>
+			</TransactionTime>
+		</Transaction>
+
+		<Transaction>
+			<TransactionID> 06 </TransactionID>
+			<ClientID> 06 </ClientID>
+            <ClientName>Estabelecimentos Alentejano António Álvaro da Silva Matos</ClientName>
+			<ProductID> 06 </ProductID>
+            <ProductName>Bolo Rei</ProductName>
+			<ProductQuantity> 4 </ProductQuantity>
+			<TotalCost> 35.20 </TotalCost>
+			<TransactionTime>
+				<Date> 24/10/2017 </Date>
+				<Time> 15:20 </Time>
+			</TransactionTime>
+		</Transaction>
+
+		<Transaction>
+			<TransactionID> 07 </TransactionID>
+			<ClientID> 07 </ClientID>
+            <ClientName> Centro Cultural e Recrea. de Válega </ClientName>
+			<ProductID> 07 </ProductID>
+            <ProductName>Regueifa</ProductName>
+			<ProductQuantity> 5 </ProductQuantity>
+			<TotalCost> 5.50 </TotalCost>
+			<TransactionTime>
+				<Date> 16/10/2017 </Date>
+				<Time> 12:20 </Time>
+			</TransactionTime>
+		</Transaction>
+
+		<Transaction>
+			<TransactionID> 08 </TransactionID>
+			<ClientID> 08 </ClientID>
+            <ClientName> I.V.S. Irmaos Vaz e Silva e C  Lda </ClientName>
+			<ProductID> 08 </ProductID>
+            <ProductName>Pão de forma</ProductName>
+			<ProductQuantity> 4 </ProductQuantity>
+			<TotalCost> 6.00 </TotalCost>
+			<TransactionTime>
+				<Date> 24/12/2017 </Date>
+				<Time> 15:20 </Time>
+			</TransactionTime>
+		</Transaction>
+
+        <Transaction>
+			<TransactionID> 09 </TransactionID>
+			<ClientID> 01 </ClientID>
+            <ClientName>Agrupamento de Escolas de Ovar</ClientName>
+			<ProductID> 01 </ProductID>
+            <ProductName>Pão</ProductName>
+			<ProductQuantity> 20 </ProductQuantity>
+			<TotalCost> 2.05 </TotalCost>
+			<TransactionTime>
+				<Date> 18/10/2017 </Date>
+				<Time> 16:00 </Time>
+			</TransactionTime>
+		</Transaction>
+
+	</ClientsTransactions>
+
+</CompanySales>

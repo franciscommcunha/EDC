@@ -1,0 +1,294 @@
+<!--
+Sites visited:
+https://www.w3schools.com/w3css/w3css_icons.asp
+http://lxml.de/xpathxslt.html
+https://stackoverflow.com/questions/4848611/rendering-a-template-variable-as-html
+https://docs.djangoproject.com/en/dev/ref/templates/builtins/#safe
+-->
+
+<!--
+Important notes:
+In the search, the urls for the information of the products
+have an additional space for purposes of correcting a bug due
+to the split function and display the correct information
+-->
+
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+
+<head>
+    <title>Gestor de Vendas de uma Padaria</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    {% load staticfiles %}
+    <link rel="stylesheet" href="{%static '/assets/css/main.css' %}">
+
+    <script>
+        function activateInput(){
+            var v = document.getElementById("sort_input");
+            v.click();
+            var i = document.getElementById("input_submit");
+            i.click();
+        }
+    </script>
+
+</head>
+
+<body class="homepage">
+        <div id="page-wrapper">
+
+        <!-- Header -->
+            <div id="header-wrapper">
+                <div id="header" class="container" style="width: 100%">
+
+                    <!-- Nav -->
+                        <nav id="nav" style="margin-top: -15px;">
+                            <ul>
+                                <li>
+                                    <a class="icon fa-home" href="/">
+                                        <span>Home</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="/add_client" class="fa fa-user-plus" aria-hidden="true">
+                                        <span>Adicionar cliente</span>
+                                    </a>
+                                </li>
+
+                                <li>
+                                    <a href="/list_clients" class="fa fa-user" aria-hidden="true">
+                                        <span>Listar clientes</span>
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="/add_product" class="fa fa-cart-plus" aria-hidden="true">
+                                        <span>Adicionar produto</span>
+                                    </a>
+                                </li>
+
+                                <li>
+                                    <a href="/list_products" class="fa fa-shopping-cart" aria-hidden="true">
+                                        <span>Listar produtos</span>
+                                    </a>
+                                </li>
+
+                                <li>
+                                    <a href="/add_sale" class="fa fa-shopping-bag" aria-hidden="true">
+                                        <span>Adicionar venda</span>
+                                    </a>
+                                </li>
+
+                                <li>
+                                    <a href="/list_sales" class="fa fa-money" aria-hidden="true">
+                                        <span>Listar vendas</span>
+                                    </a>
+                                </li>
+
+                                
+                            </ul>
+                        </nav>
+
+                    <!-- Logo -->
+                        <h1 id="logo" style="margin-top: -100px;"><a href="/">Gestor de Vendas</a></h1>
+                        <br>
+                        <h1 id="logo"><a href="/">de uma padaria</a></h1>
+                        <br>
+
+                    <!-- Search bar -->
+                    <div id="features-wrapper">
+                        <section id="features" class="container">
+                                <section id="search">
+                                <ul class="actions">
+                                    <form id="search_form" action="/search" method="get">
+                                        <input id="search-input" class="form-control input-lg" name="search" placeholder="Pesquisar produtos ou clientes" style="width: 250px;">
+                                        <li>    
+                                            <button class="button icon fa fa-search" type="submit">Pesquisar</button>
+                                        </li>
+                                    </form>
+                                </ul>
+                                </section>
+                        </section>
+                    </div>
+
+                    <!-- Search results tables -->
+                    <div class="container" style="text-align: center;width: 700px;">
+                        <form class="pure-form pure-form-aligned">
+                                <div align="center" id="customer_table">
+                                <style>
+                                th{
+                                        background-color: #ed786a;
+                                        border: none;
+                                        color: white;
+                                        padding: 10px;
+                                        text-align: center;
+                                        text-shadow: 1px 1px 1px ;
+                                        white-space: nowrap;
+                                }
+                                td {
+                                    border-bottom: solid 1px #DDEFEF;
+                                    color: #333;
+                                    padding: 10px;
+                                    text-shadow: 1px 1px 1px #fff;
+                                    white-space: nowrap;
+                                }
+                                </style>
+
+                                {% if search_flag %}
+
+                                <div class="row">
+                                    <label for="selected"> Found {{count}} result(s) for:</label>
+                                    <label for="selected" style="color:#ed786a;">"{{input}}"</label>
+
+                                    <div class="row" align="right">
+                                    <form action="{% url 'order_results' %}" method="post" style="display:none;"> </form>
+
+                                        <form action="{% url 'order_results' %}" method="post"> 
+                                            {% csrf_token %}
+                                            <select name="selected" id="select" style="width: 125px;height: 45px;" align="right" onchange="activateInput()">
+                                                <option selected="selected" disabled>Order by</option>
+                                                <option value="a-z"> A-Z </option>
+                                                <option value="z-a"> Z-A </option>
+                                                <option value="clients"> Clients </option>
+                                                <option value="products"> Products </option>
+                                                <option value="transactions"> Transactions </option>
+                                            </select>
+                                            <input for="selected" type="submit" value="Sort" id="sort_input" style="display:none;"/>
+                                            <input name="input" for="input" type="hidden" id="input_submit" value="{{input}}"/>
+                                            <input name="count" for="input" type="hidden" id="input_submit" value="{{count}}"/>
+                                            <input name="search_flag" for="input" type="hidden" id="input_submit" value="{{search_flag}}"/>
+                                        </form>
+                                    </div>
+                                </div>
+
+                                <br>
+
+                                <table align="center" id="resultTable" name="resultTable" style="border: solid black;" class="sortable">
+                                    {% if count %}
+                                    <thead id="resultThead">
+                                        <tr>
+                                            <th> Type </th>
+                                            <th> Value </th>
+                                        </tr>
+                                    {% endif %}
+                                    </thead>
+                                        {% if value_sort == "clients" %}
+
+                                            {% for client in clients %}
+                                                <tr style="border: solid black;">
+                                                    <td style="border: solid black"> 
+                                                        <a href="/list_clients">Client</a> 
+                                                    </td>
+                                                    <td style="border: solid black">
+                                                       <a href="/clients_info/{{client}}">{{ client }}</a>
+                                                    </td>
+                                                </tr>
+                                            {% endfor %}
+
+                                            {% for product in products %}
+                                                <tr style="border: solid black;">
+                                                    <td style="border: solid black"> 
+                                                        <a href="/list_products"> Product </a>
+                                                    </td>
+                                                    <td style="border: solid black">
+                                                        <a href="/info_products/%20{{product}}"> {{ product }} </a>
+                                                    </td>
+                                                </tr>
+                                            {% endfor %}
+
+                                            {% for transaction in transactions %}
+                                                <tr style="border: solid black;">
+                                                    <td style="border: solid black"> 
+                                                        <a href="/list_sales"> Transaction </a>
+                                                    </td>
+                                                    <td style="border: solid black">
+                                                        <a href="/info_sales/{{transaction}}"> {{ transaction }} </a>
+                                                    </td>
+                                                </tr>
+                                            {% endfor %}  
+
+                                        {% elif value_sort == "products" %}
+
+                                            {% for product in products %}
+                                                <tr style="border: solid black;">
+                                                    <td style="border: solid black"> 
+                                                        <a href="/list_products"> Product </a>
+                                                    </td>
+                                                    <td style="border: solid black">
+                                                        <a href="/info_products/%20{{product}}"> {{ product }} </a>
+                                                    </td>
+                                                </tr>
+                                            {% endfor %}
+
+                                            {% for client in clients %}
+                                                <tr style="border: solid black;">
+                                                    <td style="border: solid black"> 
+                                                        <a href="/list_clients">Client</a> 
+                                                    </td>
+                                                    <td style="border: solid black">
+                                                       <a href="/clients_info/{{client}}">{{ client }}</a>
+                                                    </td>
+                                                </tr>
+                                            {% endfor %}
+
+                                            {% for transaction in transactions %}
+                                                <tr style="border: solid black;">
+                                                    <td style="border: solid black"> 
+                                                        <a href="/list_sales"> Transaction </a>
+                                                    </td>
+                                                    <td style="border: solid black">
+                                                        <a href="/info_sales/{{transaction}}"> {{ transaction }} </a>
+                                                    </td>
+                                                </tr>
+                                            {% endfor %}  
+
+                                        {% elif value_sort == "transactions" %}
+
+                                            {% for transaction in transactions %}
+                                                <tr style="border: solid black;">
+                                                    <td style="border: solid black"> 
+                                                        <a href="/list_sales"> Transaction </a>
+                                                    </td>
+                                                    <td style="border: solid black">
+                                                        <a href="/info_sales/{{transaction}}"> {{ transaction }} </a>
+                                                    </td>
+                                                </tr>
+                                            {% endfor %}  
+
+                                            {% for client in clients %}
+                                                <tr style="border: solid black;">
+                                                    <td style="border: solid black"> 
+                                                        <a href="/list_clients">Client</a> 
+                                                    </td>
+                                                    <td style="border: solid black">
+                                                       <a href="/clients_info/{{client}}">{{ client }}</a>
+                                                    </td>
+                                                </tr>
+                                            {% endfor %}
+
+                                            {% for product in products %}
+                                                <tr style="border: solid black;">
+                                                    <td style="border: solid black"> 
+                                                        <a href="/list_products"> Product </a>
+                                                    </td>
+                                                    <td style="border: solid black">
+                                                        <a href="/info_products/{{product}}"> {{ product }} </a>
+                                                    </td>
+                                                </tr>
+                                            {% endfor %}
+                                        {% endif %}
+                                    <input for="resultTable" type="submit" style="display: none;"/>
+                                </table>
+
+                                {% endif %}
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="weather">
+            {{ xml | safe }}
+        </div>
+</body>
+</html>    

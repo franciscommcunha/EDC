@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:georss="http://www.georss.org/georss" version="2.0">
+  <channel>
+    <atom:link href="http://open.live.bbc.co.uk/weather/feeds/en/2742611/3dayforecast.rss" rel="self" type="application/rss+xml" />
+    <title>BBC Weather - Forecast for  Aveiro, Portugal</title>
+    <link>http://www.bbc.co.uk/weather/2742611</link>
+    <description>3-day forecast for Aveiro from BBC Weather, including weather, temperature and wind information</description>
+    <language>en</language>
+    <copyright>Copyright: (C) British Broadcasting Corporation, see http://www.bbc.co.uk/terms/additional_rss.shtml for more details</copyright>
+    <pubDate>Fri, 27 Oct 2017 19:34:12 +0100</pubDate>
+    <image>
+      <title>BBC Weather - Forecast for  Aveiro, Portugal</title>
+      <url>http://static.bbci.co.uk/weather/0.3.203/images/icons/individual_57_icons/en_on_light_bg/0.gif</url>
+      <link>http://www.bbc.co.uk/weather/2742611</link>
+      <width>-1</width>
+      <height>-1</height>
+    </image>
+    <item>
+      <title>Friday: Clear Sky, Minimum Temperature: 14°C (57°F)</title>
+      <link>http://www.bbc.co.uk/weather/2742611?day=0</link>
+      <description>Minimum Temperature: 14°C (57°F), Wind Direction: North Easterly, Wind Speed: 4mph, Visibility: Very Good, Pressure: 1028mb, Humidity: 54%, UV Risk: 4, Sunset: 18:38 WEST</description>
+      <pubDate>Fri, 27 Oct 2017 19:34:12 +0100</pubDate>
+      <guid isPermaLink="false">http://www.bbc.co.uk/weather/2742611-0-2017-10-27T16:00:41.048+01:00</guid>
+      <georss:point>40.64427 -8.64554</georss:point>
+    </item>
+    <item>
+      <title>Saturday: Sunny, Maximum Temperature: 26°C (79°F) Minimum Temperature: 12°C (54°F)</title>
+      <link>http://www.bbc.co.uk/weather/2742611?day=1</link>
+      <description>Maximum Temperature: 26°C (79°F), Minimum Temperature: 12°C (54°F), Wind Direction: East North Easterly, Wind Speed: 4mph, Visibility: Very Good, Pressure: 1025mb, Humidity: 43%, UV Risk: 4, Sunrise: 08:00 WEST, Sunset: 18:37 WEST</description>
+      <pubDate>Fri, 27 Oct 2017 19:34:12 +0100</pubDate>
+      <guid isPermaLink="false">http://www.bbc.co.uk/weather/2742611-1-2017-10-27T19:34:12.000+01:00</guid>
+      <georss:point>40.64427 -8.64554</georss:point>
+    </item>
+    <item>
+      <title>Sunday: Sunny, Maximum Temperature: 24°C (75°F) Minimum Temperature: 12°C (54°F)</title>
+      <link>http://www.bbc.co.uk/weather/2742611?day=2</link>
+      <description>Maximum Temperature: 24°C (75°F), Minimum Temperature: 12°C (54°F), Wind Direction: North North Easterly, Wind Speed: 5mph, Visibility: Very Good, Pressure: 1023mb, Humidity: 40%, UV Risk: 4, Sunrise: 07:01 WEST, Sunset: 17:35 WEST</description>
+      <pubDate>Fri, 27 Oct 2017 19:34:12 +0100</pubDate>
+      <guid isPermaLink="false">http://www.bbc.co.uk/weather/2742611-2-2017-10-27T19:34:12.000+01:00</guid>
+      <georss:point>40.64427 -8.64554</georss:point>
+    </item>
+  </channel>
+</rss>
+
